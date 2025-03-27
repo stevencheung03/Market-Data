@@ -21,4 +21,4 @@ def csv_individual_market_data(ticker: str, v_start: str, v_end: str, v_period: 
         for i in data.to_csv():
             f.write(i)
 
-print(get_individual_market_data("AAPL", "2024-01-01", "2025-01-01", "1d", "1d").to_csv())
+csv_individual_market_data("AAPL", "2024-01-01", "2025-01-01", "1d", "1d").to_csv()
