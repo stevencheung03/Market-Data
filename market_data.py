@@ -1,7 +1,4 @@
 import yfinance as yf
-import matplotlib.pyplot as plt
-import pandas as pd
-import csv
 
 def csv_individual_market_data(ticker: str, v_start: str, v_end: str, v_period: str, v_interval: str):
     """Fetches market data for a given stock ticker within a specified time range and saves it as a CSV file.
