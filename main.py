@@ -21,9 +21,6 @@ def csv_individual_market_data(ticker: str, v_start: str, v_end: str, v_period: 
         for i in data.to_csv():
             f.write(i)
 
-def get_one_year_intervals(start_year: int, end_year: int):
+def get_x_year_intervals(ticker: str, start_year: int, end_year: int, interval: int):
     for i in range(start_year, end_year+1):
-        csv_individual_market_data("AAPL", f'{i}-01-01', f'{i+1}-01-01', "1d", "1d")
-
-
-get_one_year_intervals(2021, 2025)
+        csv_individual_market_data(ticker, f'{i}-01-01', f'{i+interval}-01-01', "1d", "1d")
