@@ -17,7 +17,7 @@ def csv_individual_market_data(ticker: str, v_start: str, v_end: str, v_period: 
         _type_: A DataFrame containing the fetched market data.
     """
     data = yf.download(ticker, start=v_start, end=v_end, period=v_period, interval=v_interval)
-    with open(f'Market-Data/DataSets/{v_start}_{v_end}_{ticker}.csv', "w") as f:
+    with open(f'{v_start}_{v_end}_{ticker}.csv', "w") as f:
         for i in data.to_csv():
             f.write(i)
 
